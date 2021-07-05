@@ -1,0 +1,45 @@
+{
+  "$schema": "https://deno.land/x/denon@2.4.7/schema.json",
+  "allow": [
+    "net",
+    "env",
+    "read",
+    "write"
+  ],
+  "scripts": {
+    "start": {
+      "cmd": "deno run app.ts",
+      "desc": "run my app.ts file",
+      "env": {
+        "ENV": "develop",
+        "PORT": "3002"
+      }
+    },
+    "staging": {
+      "cmd": "deno run app.ts",
+      "desc": "run my app.ts file",
+      "env": {
+        "ENV": "staging",
+        "PORT": "8000",
+        "HOST": "127.0.0.1"
+      }
+    },
+    "prod": {
+      "cmd": "deno run app.ts",
+      "desc": "run my app.ts file",
+      "env": {
+        "ENV": "prod"
+      }
+    },
+    "format": {
+      "cmd": "deno fmt",
+      "desc": "Format the code.",
+      "allow": []
+    }
+  },
+  "logger" : {
+    "fullscreen": false,
+    "quiet": false,
+    "debug": true
+  }
+}
